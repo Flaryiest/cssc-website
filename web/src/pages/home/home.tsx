@@ -49,8 +49,6 @@ const ParticleCanvas: React.FC = () => {
       particlesRef.current.forEach((particle) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-
-        // Mouse interaction
         const dx = mouseRef.current.x - particle.x;
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -61,7 +59,6 @@ const ParticleCanvas: React.FC = () => {
           particle.vy -= (dy / distance) * force * 0.01;
         }
 
-        // Boundary check
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
@@ -72,8 +69,6 @@ const ParticleCanvas: React.FC = () => {
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw connections
       particlesRef.current.forEach((particle, i) => {
         particlesRef.current.slice(i + 1).forEach((otherParticle) => {
           const dx = particle.x - otherParticle.x;
@@ -91,7 +86,6 @@ const ParticleCanvas: React.FC = () => {
         });
       });
 
-      // Draw particles
       particlesRef.current.forEach((particle) => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);

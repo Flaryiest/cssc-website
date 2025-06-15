@@ -466,7 +466,7 @@
 /* Statistics Section */
 .statistics {
   padding: 100px 0;
-  background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+  background: linear-gradient(135deg, #7d03ff 0%,  #f2fdf3 100%);
   position: relative;
   overflow: hidden;
 }
@@ -554,7 +554,7 @@
 /* Format Section */
 .format {
   padding: 100px 0;
-  background: linear-gradient(135deg, #fefce8 0%, #fdf2f8 100%);
+  background: linear-gradient(135deg, #fefce8 0%, #ff95d1 100%);
   position: relative;
 }
 
@@ -578,7 +578,7 @@
 .formatCard {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(168, 85, 247, 0.15);
-  border-radius: 20px;
+  border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
@@ -590,7 +590,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 8px;
   background: linear-gradient(90deg, #a855f7, #ec4899);
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -755,7 +755,6 @@
   margin-right: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navMenu {
     position: fixed;
