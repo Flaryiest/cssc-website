@@ -1,0 +1,372 @@
+.headerContainer {
+  width: 100%;
+  max-width: 100dvw;
+  min-height: 128px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+  font-family: 'Bricolage Grotesque';
+}
+
+.header {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0px auto;
+  min-height: 42px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fdfdfd;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fdfdfd;
+  font-weight: 550;
+  gap: 8px;
+  z-index: 10;
+}
+.logoImage {
+  height: 36px;
+}
+
+.logoTitle {
+  height: 100%;
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.centerSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 42px;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 3rem 0.3rem 3rem;
+  border-radius: 1.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease;
+  color: #fdfdfd;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, #ff00ea 0%, #ff00ea 50%, #ff00ea 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(215, 143, 255, 0.5);
+}
+
+.navLink:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.navLink:hover {
+  color: #5204fa;
+}
+
+.registrationList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  gap: 8px;
+  z-index: 2;
+  background-color: rgba(253, 241, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  border-style: solid;
+  border-width: 1px;
+  height: 32px;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.loginLink {
+  flex: 4;
+  border-radius: 1rem 0.5rem 0.5rem 1rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem 0.8rem;
+  text-align: center;
+  height: calc(100% - 6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px 0 2px;
+  color: #fdfdfd;
+}
+
+.loginLink:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.signupLink {
+  flex: 6;
+  border-radius: 0.5rem 1rem 1rem 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem 0.8rem;
+  text-align: center;
+  height: calc(100% - 6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px 0 2px;
+  background: linear-gradient(
+    135deg,
+    #4a4ac8 0%,
+    #6d47db 35%,
+    #7231bd 70%,
+    #7e32c0 100%
+  );
+  color: white;
+  font-weight: 500;
+}
+
+.signupLink:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+  background: linear-gradient(
+    135deg,
+    #5a5ad8 0%,
+    #7d57eb 35%,
+    #5d2c95 70%,
+    #8e42d0 100%
+  );
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  padding: 0;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+.menuButton.active:hover span {
+  background-color: white;
+}
+
+.menuButton span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menuButton.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: white;
+}
+
+.menuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: white;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobileMenuContent {
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileNavLink {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.mobileNavLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.mobileNavLink:hover::after {
+  width: 100%;
+}
+
+.mobileLoginItem {
+  margin-top: 1rem;
+}
+
+.mobileLoginLink {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileSignupLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  background: white;
+  color: #6a3de8;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.mobileSignupLink:hover {
+  background: transparent;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .centerSection,
+  .rightSection {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  .headerContainer {
+    padding: 0.5rem 0;
+  }
+}
