@@ -176,15 +176,8 @@ const Community: React.FC = () => {
     <>
       <Navbar />
       <div className={styles.community}>
-        {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroBackground}>
-            <div className={styles.floatingElements}>
-              <div className={`${styles.element} ${styles.element1}`}>TEAM</div>
-              <div className={`${styles.element} ${styles.element2}`}>👥</div>
-              <div className={`${styles.element} ${styles.element3}`}>UNITY</div>
-              <div className={`${styles.element} ${styles.element4}`}>🎓</div>
-            </div>
           </div>
           <div className={styles.container}>
             <div className={styles.heroContent}>
@@ -196,7 +189,6 @@ const Community: React.FC = () => {
           </div>
         </section>
 
-        {/* Mission Statement */}
         <section className={styles.mission}>
           <div className={styles.container}>
             <div className={styles.missionContent}>
