@@ -124,7 +124,7 @@ export default function Navbar() {
                   Information
                 </Link>
               </li>
-{/*               <li>
+              <li>
                 <Link
                   to="/community"
                   className={styles.mobileNavLink}
@@ -132,7 +132,7 @@ export default function Navbar() {
                 >
                   Community
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link
                   to="/sponsors"
@@ -144,20 +144,20 @@ export default function Navbar() {
               </li>
               <li className={styles.mobileLoginItem}>
                 <Link
-                  to="/login"
+                  to="/contact"
                   className={styles.mobileLoginLink}
                   onClick={handleCloseMenu}
                 >
-                  Login
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/signup"
+                  to="/register"
                   className={styles.mobileSignupLink}
                   onClick={handleCloseMenu}
                 >
-                  Sign Up
+                  Register
                 </Link>
               </li>
             </ul>
