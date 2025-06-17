@@ -18,37 +18,158 @@ interface Alumni {
 const Community: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
-      name: "Sarah Chen",
-      role: "Executive Director",
-      school: "University of Calgary",
-      image: "/images/team/sarah.jpg"
-    },
-    {
-      name: "Marcus Thompson",
-      role: "Competition Coordinator",
-      school: "Western Canada High School",
-      image: "/images/team/marcus.jpg"
-    },
-    {
-      name: "Aisha Patel",
-      role: "Communications Lead",
+      name: "Janice Xie",
+      role: "President",
       school: "Sir Winston Churchill High School",
-      image: "/images/team/aisha.jpg"
+      image: "/images/team/janice.jpg"
     },
     {
-      name: "David Kim",
-      role: "Technical Director",
-      school: "University of Calgary",
-      image: "/images/team/david.jpg"
+      name: "Cheri Dang",
+      role: "Deputy Director",
+      school: "Westmount Charter School",
+      image: "/images/team/cheri.jpg"
+    },
+    {
+      name: "Haotian Fang",
+      role: "IT Director",
+      school: "Sir Winston Churchill High School",
+      image: "/images/team/haotian.jpg"
+    },
+    {
+      name: "Misha Kapadia",
+      role: "Outreach Director",
+      school: "Westmount Charter School",
+      image: "/images/team/misha.jpg"
+    },
+    {
+      name: "Bohan Hao",
+      role: "Finance Director",
+      school: "Sir Winston Churchill High School",
+      image: "/images/team/bohan.jpg"
+    },
+    {
+      name: "Amy Liu",
+      role: "Finance Director",
+      school: "Sir Winston Churchill High School",
+      image: "/images/team/amy.jpg"
+    },
+    {
+      name: "Avani Deshpande",
+      role: "Operations Director",
+      school: "North Trail High School",
+      image: "/images/team/avani.jpg"
+    },
+    {
+      name: "Jasper Zhao",
+      role: "Operations Director",
+      school: "Western Canada High School",
+      image: "/images/team/jasper.jpg"
+    },
+    {
+      name: "Adonia Li",
+      role: "Content Director",
+      school: "Sir Winston Churchill High School",
+      image: "/images/team/adonia.jpg"
+    },
+    {
+      name: "Isabel W",
+      role: "Content Director",
+      school: "Westmount Charter School",
+      image: "/images/team/isabel.jpg"
     }
   ];
 
-  const alumni: Alumni[] = [
-    { name: "Jennifer Wu", year: "2019-2022", currentStatus: "Engineering Student at UofC" },
-    { name: "Alex Rodriguez", year: "2019-2021", currentStatus: "Pre-Med at University of Alberta" },
-    { name: "Emma Johnson", year: "2020-2023", currentStatus: "Computer Science at SAIT" },
-    { name: "Ryan Park", year: "2019-2020", currentStatus: "Medicine at University of Calgary" },
-    { name: "Sophie Martin", year: "2021-2023", currentStatus: "Chemistry at Mount Royal University" }
+  const alumniMembers = [
+    {
+      name: "Roy Han",
+      position: "",
+      class: "Class of 2025",
+      school: "Harvard University"
+    },
+    {
+      name: "Debadrita Chowdhury",
+      position: "",
+      class: "Class of 2024",
+      school: "University of Alberta"
+    },
+    {
+      name: "Ali Waseem",
+      position: "",
+      class: "Class of 2023",
+      school: "Dow International Medical College"
+    },
+    {
+      name: "Aaron Abraham",
+      position: "",
+      class: "Class of 2023",
+      school: "University of Waterloo"
+    },
+    {
+      name: "Monica Aida Lopez Quiroz",
+      position: "",
+      class: "Class of 2020",
+      school: "Westmount Charter School"
+    },
+    {
+      name: "Yifan Wang",
+      position: "",
+      class: "Class of 2020",
+      school: "Western Canada High School"
+    },
+    {
+      name: "Jason Xie",
+      position: "",
+      class: "Class of 2022",
+      school: "Sir Winston Churchill High School"
+    },
+    {
+      name: "Awad Khalid",
+      position: "",
+      class: "Class of 2022",
+      school: "Webber Academy"
+    },
+    {
+      name: "Eric Sun",
+      position: "",
+      class: "",
+      school: ""
+    },
+    {
+      name: "Nathan Zhao",
+      position: "",
+      class: "",
+      school: ""
+    },
+    {
+      name: "Ryan Han",
+      position: "",
+      class: "",
+      school: ""
+    },
+    {
+      name: "Weilan Zhang",
+      position: "",
+      class: "",
+      school: ""
+    },
+    {
+      name: "Andrew Xu",
+      position: "",
+      class: "",
+      school: ""
+    },
+    {
+      name: "Ahyan Kabir",
+      position: "",
+      class: "",
+      school: "University of Waterloo"
+    },
+    {
+      name: "Joshua Cheng",
+      position: "",
+      class: "",
+      school: ""
+    }
   ];
 
   return (
@@ -198,12 +319,12 @@ const Community: React.FC = () => {
               Former team members who have gone on to pursue their passion for science
             </p>
             <div className={styles.alumniGrid}>
-              {alumni.map((alum, index) => (
+              {alumniMembers.map((alum, index) => (
                 <div key={index} className={styles.alumniCard}>
                   <div className={styles.alumniInfo}>
                     <h3>{alum.name}</h3>
-                    <p className={styles.alumniYear}>{alum.year}</p>
-                    <p className={styles.alumniStatus}>{alum.currentStatus}</p>
+                    <p className={styles.alumniYear}>{alum.class}</p>
+                    <p className={styles.alumniStatus}>{alum.position} {alum.school && ` ${alum.school}`}</p>
                   </div>
                   <div className={styles.alumniIcon}>
                     <i className="fas fa-graduation-cap"></i>
