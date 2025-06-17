@@ -1,18 +1,12 @@
 import React from 'react';
 import styles from './community.module.css';
-import Navbar from '@/components/navbar/navbar';
+import NavbarTwo from '@/components/navbarTwo/navbarTwo';
 
 interface TeamMember {
   name: string;
   role: string;
   school: string;
   image: string;
-}
-
-interface Alumni {
-  name: string;
-  year: string;
-  currentStatus: string;
 }
 
 const Community: React.FC = () => {
@@ -174,7 +168,7 @@ const Community: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      <NavbarTwo />
       <div className={styles.community}>
         <section className={styles.hero}>
           <div className={styles.heroBackground}>
