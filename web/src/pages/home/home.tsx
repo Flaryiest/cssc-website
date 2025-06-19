@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './home.module.css';
 import Navbar from '@/components/navbar/navbar';
 
@@ -10,6 +10,48 @@ interface Particle {
   size: number;
   opacity: number;
 }
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQItem[] = [
+  {
+    question: "I cannot find any teammates, or only have one teammate for a team of 2. Can I still register?",
+    answer: "Yes, you can still register, and we will try to match you up with other students with the same problem. However, if we cannot arrange for you to have a team of three, you will be ineligible for participation in the final team round. Thus, we recommend that you try your best to find a team of three."
+  },
+  {
+    question: "Does everyone on my team have to be from the same school?",
+    answer: "No, a team can be composed of teammates from different schools. However, you will be ineligible to receive the team trophy, as it should be displayed at a school represented by a team completely from that school."
+  },
+  {
+    question: "Does everyone on my team have to be in the same grade?",
+    answer: "No, teams can be composed of various grades without being placed at any disadvantage."
+  },
+  {
+    question: "I have already registered, but a teammate had to drop out. What should I do?",
+    answer: "Please send us an email regarding who dropped out, as well as the name, school, grade, and email of a replacing teammate if you are able to find one."
+  }
+];
+
+const FAQItem: React.FC<{ item: FAQItem; isOpen: boolean; onToggle: () => void }> = ({ 
+  item, 
+  isOpen, 
+  onToggle 
+}) => {
+  return (
+    <div className={styles.faqItem}>
+      <button className={styles.faqQuestion} onClick={onToggle}>
+        <span>{item.question}</span>
+        <i className={`fas fa-chevron-down ${styles.faqIcon} ${isOpen ? styles.faqIconOpen : ''}`}></i>
+      </button>
+      <div className={`${styles.faqAnswer} ${isOpen ? styles.faqAnswerOpen : ''}`}>
+        <p>{item.answer}</p>
+      </div>
+    </div>
+  );
+};
 
 const ParticleCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -130,11 +172,16 @@ const ParticleCanvas: React.FC = () => {
 };
 
 const Home: React.FC = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
   return <>
     <Navbar/>
     <div className={styles.home}>
@@ -190,7 +237,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className={styles.whyCsscImage}>
-                <img src="/images/students-collaborating.jpg" alt="Students collaborating on science projects" />
+                <img src="/general/why.webp" alt="Students collaborating on science projects" />
               </div>
             </div>
           </div>
@@ -231,7 +278,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Format Section */}
         <section id="format" className={styles.format}>
           <div className={styles.container}>
             <h2 className={styles.sectionTitle}>Competition Format</h2>
@@ -244,7 +290,7 @@ const Home: React.FC = () => {
                   <div className={styles.roundType}>Individual</div>
                 </div>
                 <div className={styles.formatImage}>
-                  <img src="/images/individual-competition.jpg" alt="Student competing individually" />
+                  <img src="/general/2019.webp" alt="Student competing individually" />
                 </div>
                 <div className={styles.formatContent}>
                   <p>30 words from biology, chemistry, or physics worth 1, 2 or 3 points will be read out, one at a time, to competitors. To earn points, the competitor must write them correctly within a time limit. The most points wins!</p>
@@ -257,7 +303,7 @@ const Home: React.FC = () => {
                   <div className={styles.roundType}>Individual</div>
                 </div>
                 <div className={styles.formatImage}>
-                  <img src="/images/spelling-knockout.jpg" alt="Students in knockout spelling round" />
+                  <img src="/general/home.webp" alt="Students in knockout spelling round" />
                 </div>
                 <div className={styles.formatContent}>
                   <p>Competitors must first spell as many words as possible in 2 fast-paced rounds. The top performers then move to a knockout stage, taking turns to spell words verbally. The last person standing wins!</p>
@@ -270,7 +316,7 @@ const Home: React.FC = () => {
                   <div className={styles.roundType}>Team</div>
                 </div>
                 <div className={styles.formatImage}>
-                  <img src="/images/team-competition.jpg" alt="Teams competing for the CSSC trophy" />
+                  <img src="/general/trophy.webp" alt="Teams competing for the CSSC trophy" />
                 </div>
                 <div className={styles.formatContent}>
                   <p>After 3 preliminary cycles, the top 8 teams will compete in a bracket to determine the winner of the CSSC trophy.</p>
@@ -279,6 +325,23 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+              {/* FAQ Section */}
+      < section className={styles.faq} id="faq">
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+          <div className={styles.faqContainer}>
+            {faqData.map((item, index) => (
+              <FAQItem
+                key={index}
+                item={item}
+                isOpen={openFAQ === index}
+                onToggle={() => toggleFAQ(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
 
         {/* Contact Section */}
         <section id="contact" className={styles.contact}>
@@ -325,7 +388,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className={styles.footerBottom}>
-            <p>&copy; 2024 Calgary Science Spelling Challenge. All rights reserved.</p>
+            <p>&copy; 2025 Calgary Science Spelling Challenge. All rights reserved.</p>
           </div>
         </div>
       </footer>

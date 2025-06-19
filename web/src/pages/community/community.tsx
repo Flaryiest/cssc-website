@@ -95,13 +95,13 @@ const Community: React.FC = () => {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <h1>Our Community</h1>
-            <p>Meet the dedicated team behind the Calgary Secondary Students' Council</p>
+            <p>Meet the dedicated team behind the Calgary Science Spelling Challenge</p>
           </div>
         </section>
 
         <section className={styles.teamSection}>
           <div className={styles.container}>
-            <h2>Meet Our Team</h2>
+            <h2>Our Team</h2>
             <div className={styles.hexagonMain}>
               <div className={styles.hexagonContainer}>
                 {teamMembers.map((member) => (

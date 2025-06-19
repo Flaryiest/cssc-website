@@ -2,11 +2,11 @@
   width: 100%;
   max-width: 100dvw;
   min-height: 128px;
+  position: absolute;
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   padding-top: 2rem;
-  font-family: 'Bricolage Grotesque';
 }
 
 .header {
@@ -35,7 +35,7 @@
   justify-content: center;
   text-decoration: none;
   font-size: 1rem;
-  color: #fdfdfd;
+  color: #333;
 }
 
 .logoLink {
@@ -44,7 +44,7 @@
   justify-content: center;
   text-decoration: none;
   font-size: 1rem;
-  color: #fdfdfd;
+  color: #000000;
   font-weight: 550;
   gap: 8px;
   z-index: 10;
@@ -85,7 +85,7 @@
   font-weight: 500;
   font-size: 0.9rem;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   padding: 0.6rem 3rem 0.3rem 3rem;
   border-radius: 1.5rem;
@@ -103,7 +103,7 @@
   position: relative;
   padding-bottom: 0.3rem;
   transition: color 0.3s ease;
-  color: #fdfdfd;
+  color: black;
 }
 
 .navLink::after {
@@ -137,7 +137,7 @@
   padding: 4px;
   gap: 8px;
   z-index: 2;
-  background-color: rgba(253, 241, 255, 0.2);
+  background-color: rgba(253, 241, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;
   border-style: solid;
@@ -163,7 +163,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 2px 0 2px;
-  color: #fdfdfd;
+  color: black;
 }
 
 .loginLink:hover {
