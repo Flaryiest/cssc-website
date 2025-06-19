@@ -93,7 +93,7 @@ export default function Navbar() {
                   className={styles.signupLink}
                   onClick={handleCloseMenu}
                 >
-                  Register
+                  CSSC 2026
                 </Link>
               </li>
             </ul>
@@ -157,7 +157,7 @@ export default function Navbar() {
                   className={styles.mobileSignupLink}
                   onClick={handleCloseMenu}
                 >
-                  Register
+                  CSSC 2026
                 </Link>
               </li>
             </ul>
