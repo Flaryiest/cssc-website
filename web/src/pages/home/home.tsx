@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './home.module.css';
 import Navbar from '@/components/navbar/navbar';
 
@@ -198,12 +199,12 @@ const Home: React.FC = () => {
                 Igniting passion for science through the power of words
               </p>
               <div className={styles.heroButtons}>
-                <button className={`${styles.btn} ${styles.btnPrimary}`}>
+                <Link to="/register" className={`${styles.btn} ${styles.btnPrimary}`}>
                   Register
-                </button>
-                <button className={`${styles.btn} ${styles.btnSecondary}`}>
+                </Link>
+                <Link to="/contact" className={`${styles.btn} ${styles.btnSecondary}`}>
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
             <div className={styles.heroVisual}>
