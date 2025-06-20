@@ -8,6 +8,10 @@
   color: white;
   padding: 80px 12px;
   text-align: center;
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heroContent h1 {
@@ -45,8 +49,8 @@
 .hexagonMain {
   display: flex;
   justify-content: center;
-  --s: clamp(120px, 16vw, 280px);  /* much larger scaling range */
-  --m: clamp(4px, 1vw, 16px);      /* more responsive margins */
+  --s: clamp(160px, 16vw, 280px);  /* increased minimum from 120px to 160px */
+  --m: clamp(6px, 1vw, 16px);      /* slightly increased minimum margin */
   --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px);
 }
 
@@ -144,8 +148,8 @@
 /* Responsive adjustments for specific breakpoints */
 @media (max-width: 768px) {
   .hexagonMain {
-    --s: clamp(80px, 20vw, 180px); /* more aggressive mobile scaling */
-    --m: clamp(3px, 1.2vw, 10px);
+    --s: clamp(120px, 20vw, 180px); /* increased minimum from 80px to 120px */
+    --m: clamp(4px, 1.2vw, 10px);   /* slightly increased minimum margin */
   }
 
   .hexagonContainer {
@@ -165,8 +169,8 @@
 
 @media (max-width: 480px) {
   .hexagonMain {
-    --s: clamp(70px, 25vw, 140px); /* even more aggressive small screen scaling */
-    --m: clamp(2px, 1.5vw, 8px);
+    --s: clamp(148px, 25vw, 196px); /* increased minimum from 70px to 100px */
+    --m: clamp(3px, 1.5vw, 8px);    /* slightly increased minimum margin */
   }
   
   .hero {

@@ -352,7 +352,7 @@ const Home: React.FC = () => {
               If you have any questions, please do not hesitate to reach out!
             </p>
             <div className={styles.contactButton}>
-              <a href="mailto:info@csschallenge.org" className={`${styles.btn} ${styles.btnPrimary}`}>
+              <a href="mailto:admin@csschallenge.org" className={`${styles.btn} ${styles.btnPrimary}`}>
                 Email Us
               </a>
             </div>
