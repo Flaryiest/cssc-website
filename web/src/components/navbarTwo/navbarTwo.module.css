@@ -4,9 +4,11 @@
   min-height: 128px;
   box-sizing: border-box;
   display: flex;
+  position: fixed;
   align-items: flex-start;
   padding-top: 2rem;
   font-family: 'Bricolage Grotesque';
+  z-index: 1000;
 }
 
 .header {

@@ -46,15 +46,6 @@ export default function Navbar() {
             <ul
               className={`${styles.navList} ${menuOpen ? styles.active : ''}`}
             >
-              <li>
-                <Link
-                  to="/info"
-                  className={styles.navLink}
-                  onClick={handleCloseMenu}
-                >
-                  Information
-                </Link>
-              </li>
             <li>
                 <Link
                   to="/community"
@@ -78,15 +69,6 @@ export default function Navbar() {
 
           <div className={styles.rightSection}>
             <ul className={styles.registrationList}>
-              <li>
-                <Link
-                  to="/contact"
-                  className={styles.loginLink}
-                  onClick={handleCloseMenu}
-                >
-                  Contact
-                </Link>
-              </li>
               <li>
                 <Link
                   to="/register"
@@ -116,13 +98,6 @@ export default function Navbar() {
           <div className={styles.mobileMenuContent}>
             <ul className={styles.mobileNavList}>
               <li>
-                <Link
-                  to="/info"
-                  className={styles.mobileNavLink}
-                  onClick={handleCloseMenu}
-                >
-                  Information
-                </Link>
               </li>
               <li>
                 <Link
@@ -142,15 +117,7 @@ export default function Navbar() {
                   Sponsors
                 </Link>
               </li>
-              <li className={styles.mobileLoginItem}>
-                <Link
-                  to="/contact"
-                  className={styles.mobileLoginLink}
-                  onClick={handleCloseMenu}
-                >
-                  Contact
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/register"
