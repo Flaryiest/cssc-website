@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './sponsors.module.css';
 import NavbarTwo from '@/components/navbarTwo/navbarTwo';
-
+import ScrollToTop from '@/components/scrollToTop/scrollToTop';
 interface Sponsor {
   name: string;
   description: string;
@@ -69,6 +69,7 @@ const SponsorCard: React.FC<{ sponsor: Sponsor }> = ({ sponsor }) => {
 const Sponsors: React.FC = () => {
   return (
     <>
+    <ScrollToTop></ScrollToTop>
       <NavbarTwo />
       <main className={styles.main}>
         <section className={styles.hero}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './community.module.css';
 import NavbarTwo from '@/components/navbarTwo/navbarTwo';
+import ScrollToTop from '@/components/scrollToTop/scrollToTop';
 
 interface TeamMember {
   name: string;
@@ -74,6 +75,7 @@ const teamMembers: TeamMember[] = [
 
 const HexagonMember: React.FC<{ member: TeamMember }> = ({ member }) => {
   return (
+    
     <div className={styles.hexagon}>
       <img src={member.image} alt={member.name} className={styles.hexagonImage} />
       <div className={styles.hexagonOverlay}>
@@ -90,6 +92,7 @@ const HexagonMember: React.FC<{ member: TeamMember }> = ({ member }) => {
 const Community: React.FC = () => {
   return (
     <>
+      <ScrollToTop></ScrollToTop>
       <NavbarTwo />
       <main className={styles.main}>
         <section className={styles.hero}>

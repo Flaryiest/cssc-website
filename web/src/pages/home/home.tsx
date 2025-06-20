@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './home.module.css';
 import Navbar from '@/components/navbar/navbar';
-
+import ScrollToTop from '@/components/scrollToTop/scrollToTop';
 interface Particle {
   x: number;
   y: number;
@@ -184,6 +184,7 @@ const Home: React.FC = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
   return <>
+  <ScrollToTop></ScrollToTop>
     <Navbar/>
     <div className={styles.home}>
       <ParticleCanvas />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './registration.module.css';
 import NavbarTwo from '@/components/navbarTwo/navbarTwo';
-
+import ScrollToTop from '@/components/scrollToTop/scrollToTop';
 const Registration: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -11,6 +11,7 @@ const Registration: React.FC = () => {
 
   return (
     <>
+      <ScrollToTop></ScrollToTop>
       <NavbarTwo />
       <main className={styles.main}>
         <section className={styles.hero}>
