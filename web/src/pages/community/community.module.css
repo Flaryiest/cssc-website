@@ -156,6 +156,7 @@
     max-width: 100vw;
     padding-left: 10vw;
     padding-right: 5vw;
+    padding-bottom: 280px;
   }
   
   .heroContent h1 {
@@ -236,6 +237,7 @@
 @media (max-width: 768px) {
   .alumniSection {
     padding: 60px 0;
+    
   }
   
   .alumniSection h2 {

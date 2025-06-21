@@ -48,11 +48,20 @@ export default function Navbar() {
             >
             <li>
                 <Link
+                  to="/"
+                  className={styles.navLink}
+                  onClick={handleCloseMenu}
+                >
+                  Home
+                </Link>
+              </li>
+            <li>
+                <Link
                   to="/community"
                   className={styles.navLink}
                   onClick={handleCloseMenu}
                 >
-                  Community
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -97,15 +106,20 @@ export default function Navbar() {
         <div className={styles.mobileMenu}>
           <div className={styles.mobileMenuContent}>
             <ul className={styles.mobileNavList}>
-              <li>
-              </li>
+                <Link
+                  to="/"
+                  className={styles.mobileNavLink}
+                  onClick={handleCloseMenu}
+                >
+                  Home
+                </Link>
               <li>
                 <Link
                   to="/community"
                   className={styles.mobileNavLink}
                   onClick={handleCloseMenu}
                 >
-                  Community
+                  Our Team
                 </Link>
               </li>
               <li>
