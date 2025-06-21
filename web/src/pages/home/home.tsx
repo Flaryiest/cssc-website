@@ -203,8 +203,8 @@ const Home: React.FC = () => {
                 <Link to="/register" className={`${styles.btn} ${styles.btnPrimary}`}>
                   Register
                 </Link>
-                <Link to="/contact" className={`${styles.btn} ${styles.btnSecondary}`}>
-                  Learn More
+                <Link to="/sponsors" className={`${styles.btn} ${styles.btnSecondary}`}>
+                  Sponsors
                 </Link>
               </div>
             </div>
