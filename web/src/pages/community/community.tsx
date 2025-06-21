@@ -10,6 +10,13 @@ interface TeamMember {
   image: string;
 }
 
+interface AlumniMember {
+  name: string;
+  position?: string;
+  year: string;
+  image: string;
+}
+
 const teamMembers: TeamMember[] = [
   {
     name: "Janice Xie",
@@ -73,15 +80,108 @@ const teamMembers: TeamMember[] = [
   }
 ];
 
+const alumniMembers: AlumniMember[] = [
+  {
+    name: "Roy Han",
+    position: "Founder",
+    year: "Class of 2025 Harvard University",
+    image: "/alumni/roy.webp"
+  },
+  {
+    name: "Debadrita Chowdhury",
+    year: "Class of 2024 University of Alberta",
+    image: "/alumni/deb.webp"
+  },
+  {
+    name: "Ali Waseem",
+    year: "Class of 2023 Dow International Medical College",
+    image: "/alumni/ali.webp"
+  },
+  {
+    name: "Aaron Abraham",
+    year: "Class of 2023 University of Waterloo",
+    image: "/alumni/aaron.webp"
+  },
+  {
+    name: "Monica Aida Lopez Quiroz",
+    year: "Class of 2020 – Westmount Charter School",
+    image: "/alumni/monica.webp"
+  },
+  {
+    name: "Yifan Wang",
+    year: "Class of 2020 – Western Canada High School",
+    image: "/alumni/yifan.webp"
+  },
+  {
+    name: "Jason Xie",
+    year: "Class of 2022 – Sir Winston Churchill High School",
+    image: "/alumni/jason.webp"
+  },
+  {
+    name: "Awad Khalid",
+    year: "Class of 2022 – Webber Academy",
+    image: "/alumni/awad.webp"
+  },
+  {
+    name: "Eric Sun",
+    year: "Alumni",
+    image: "/alumni/eric.webp"
+  },
+  {
+    name: "Nathan Zhao",
+    year: "Alumni",
+    image: "/alumni/nathan.webp"
+  },
+  {
+    name: "Ryan Han",
+    year: "Alumni",
+    image: "/alumni/ryan.webp"
+  },
+  {
+    name: "Weilan Zhang",
+    year: "Alumni",
+    image: "/alumni/weilan.webp"
+  },
+  {
+    name: "Andrew Xu",
+    year: "Alumni",
+    image: "/alumni/andrew.webp"
+  },
+  {
+    name: "Ahyan Kabir",
+    year: "University of Waterloo",
+    image: "/alumni/ahyan.webp"
+  },
+  {
+    name: "Joshua Cheng",
+    year: "Alumni",
+    image: "/alumni/joshua.webp"
+  }
+];
+
 const HexagonMember: React.FC<{ member: TeamMember }> = ({ member }) => {
   return (
-    
     <div className={styles.hexagon}>
       <img src={member.image} alt={member.name} className={styles.hexagonImage} />
       <div className={styles.hexagonOverlay}>
         <div className={styles.memberInfo}>
           <h3>{member.name}</h3>
           <p className={styles.position}>{member.position}</p>
+          <p className={styles.year}>{member.year}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const HexagonAlumni: React.FC<{ member: AlumniMember }> = ({ member }) => {
+  return (
+    <div className={styles.hexagon}>
+      <img src={member.image} alt={member.name} className={styles.hexagonImage} />
+      <div className={styles.hexagonOverlay}>
+        <div className={styles.memberInfo}>
+          <h3>{member.name}</h3>
+          {member.position && <p className={styles.position}>{member.position}</p>}
           <p className={styles.year}>{member.year}</p>
         </div>
       </div>
@@ -109,6 +209,23 @@ const Community: React.FC = () => {
               <div className={styles.hexagonContainer}>
                 {teamMembers.map((member) => (
                   <HexagonMember key={member.name} member={member} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.alumniSection}>
+          <div className={styles.container}>
+            <h2>Our Alumni</h2>
+            <p className={styles.alumniDescription}>
+              We are proud of our alumni who have gone on to pursue their dreams in higher education and beyond. 
+              Their contributions to CSSC have helped shape the competition into what it is today.
+            </p>
+            <div className={styles.hexagonMain}>
+              <div className={styles.hexagonContainer}>
+                {alumniMembers.map((member) => (
+                  <HexagonAlumni key={member.name} member={member} />
                 ))}
               </div>
             </div>
