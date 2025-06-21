@@ -34,7 +34,7 @@ export default function Navbar() {
               >
                 <img
                   className={styles.logoImage}
-                  src="/wildrose-logo.webp"
+                  src="/branding/cssc-logo.webp"
                   alt="."
                 />
                 <p className={styles.logoTitle}>CSSC</p>
