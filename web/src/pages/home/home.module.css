@@ -261,6 +261,63 @@
   100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
 }
 
+/* Executive Applications Section */
+.execApps {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #fff780 0%, #f0e659 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.execApps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(157, 120, 230, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.execAppsContent {
+  position: relative;
+  z-index: 2;
+}
+
+.execAppsTitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.execAppsText {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.execAppsButton .btnPrimary {
+  background: linear-gradient(45deg, #9d78e6 0%, #7b5ccf 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(157, 120, 230, 0.4);
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+.execAppsButton .btnPrimary:hover {
+  background: linear-gradient(45deg, #7b5ccf 0%, #5d4db5 100%);
+  box-shadow: 0 8px 25px rgba(157, 120, 230, 0.6);
+  transform: translateY(-2px);
+}
+
 /* Section Titles */
 .sectionTitle {
   font-size: clamp(2rem, 4vw, 3rem);

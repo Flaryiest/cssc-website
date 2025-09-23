@@ -223,6 +223,23 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        {/* Executive Applications Section */}
+        <section id="exec-apps" className={styles.execApps}>
+          <div className={styles.container}>
+            <div className={styles.execAppsContent}>
+              <h2 className={styles.execAppsTitle}>Join Our Team!</h2>
+              <p className={styles.execAppsText}>
+                CSSC 25-26 executive team applications are now open! Apply if you are in grade 10 or 11
+              </p>
+              <div className={styles.execAppsButton}>
+                <a href="http://bit.ly/4neLRxj" target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnPrimary}`}>
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why CSSC Section */}
         <section id="why-cssc" className={styles.whyCssc}>
           <div className={styles.container}>
