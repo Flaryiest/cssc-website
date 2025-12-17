@@ -223,23 +223,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Executive Applications Section */}
-        <section id="exec-apps" className={styles.execApps}>
-          <div className={styles.container}>
-            <div className={styles.execAppsContent}>
-              <h2 className={styles.execAppsTitle}>Join Our Team!</h2>
-              <p className={styles.execAppsText}>
-                CSSC 25-26 executive team applications are now open! Apply if you are in grade 10 or 11
-              </p>
-              <div className={styles.execAppsButton}>
-                <a href="http://bit.ly/4neLRxj" target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnPrimary}`}>
-                  Apply Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Why CSSC Section */}
         <section id="why-cssc" className={styles.whyCssc}>
           <div className={styles.container}>
@@ -280,7 +263,7 @@ const Home: React.FC = () => {
                   <i className="fas fa-trophy"></i>
                 </div>
                 <div className={styles.statContent}>
-                  <h3>6</h3>
+                  <h3>7</h3>
                   <p>Successfully run competitions</p>
                 </div>
               </div>
@@ -400,8 +383,8 @@ const Home: React.FC = () => {
             <div className={styles.footerSection}>
               <h3>Contact</h3>
               <ul>
-                <li><i className="fas fa-envelope"></i> info@csschallenge.org</li>
-                <li><i className="fas fa-phone"></i> (403) 555-0123</li>
+                <li><i className="fas fa-envelope"></i> admin@csschallenge.org</li>
+                <li><i className="fab fa-instagram"></i> @csschallenge</li>
                 <li><i className="fas fa-map-marker-alt"></i> Calgary, AB</li>
               </ul>
             </div>

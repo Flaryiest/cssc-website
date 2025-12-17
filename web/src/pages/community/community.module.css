@@ -145,6 +145,12 @@
   opacity: 1;
 }
 
+/* Invisible spacer hexagon to fix row alignment */
+.hexagonSpacer {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* Responsive adjustments for specific breakpoints */
 @media (max-width: 768px) {
   .hexagonMain {

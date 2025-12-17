@@ -73,10 +73,22 @@ const teamMembers: TeamMember[] = [
     image: "/team/Adonia.webp"
   },
   {
-    name: "Isabel W",
+    name: "Shanzay Jamal",
     position: "Content Director",
-    year: "Class of 2027 – Westmount Charter School",
-    image: "/team/Isabel.webp"
+    year: "Class of 2028 – Westmount Charter School",
+    image: "/team/Shanzay.webp"
+  },
+  {
+    name: "Jia Jiwani",
+    position: "Content Director",
+    year: "Class of 2027 – Sir Winston Churchill High School",
+    image: "/team/Jia.webp"
+  },
+  {
+    name: "Kyla Huang",
+    position: "Content Director",
+    year: "Class of 2027 – Sir Winston Churchill High School",
+    image: "/team/Kyla.webp"
   }
 ];
 
@@ -210,6 +222,8 @@ const Community: React.FC = () => {
                 {teamMembers.map((member) => (
                   <HexagonMember key={member.name} member={member} />
                 ))}
+                {/* Invisible spacer to center the last row */}
+                <div className={`${styles.hexagon} ${styles.hexagonSpacer}`}></div>
               </div>
             </div>
           </div>
