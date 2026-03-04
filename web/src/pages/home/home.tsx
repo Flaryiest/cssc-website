@@ -390,7 +390,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className={styles.footerBottom}>
-            <p>&copy; 2025 Calgary Science Spelling Challenge. All rights reserved.</p>
+            <p>&copy; 2026 Calgary Science Spelling Challenge. All rights reserved.</p>
           </div>
         </div>
       </footer>

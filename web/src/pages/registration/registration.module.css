@@ -229,6 +229,66 @@
   margin-right: auto;
 }
 
+/* Details Grid */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.detailCard {
+  background: white;
+  border: 1px solid rgba(157, 120, 230, 0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.detailCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(157, 120, 230, 0.15);
+  border-color: rgba(255, 247, 128, 0.4);
+}
+
+.detailIcon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #9d78e6 0%, #7b5ccf 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.detailCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 0.25rem;
+}
+
+.detailCard p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Register CTA */
+.registerCta {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.registerCta .primaryButton {
+  font-size: 1.15rem;
+  padding: 1.1rem 2.5rem;
+}
+
 /* Timeline */
 .timeline {
   display: flex;
@@ -274,6 +334,12 @@
   color: #9d78e6;
   position: relative;
   z-index: 3;
+}
+
+.timelineComplete {
+  background: linear-gradient(45deg, #9d78e6 0%, #7b5ccf 100%);
+  color: white;
+  border-color: #9d78e6;
 }
 
 .timelineContent h3 {
@@ -459,6 +525,10 @@
 
   .statusCard {
     padding: 2rem;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
   }
 
   .timeline {
