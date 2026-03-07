@@ -431,6 +431,22 @@
   transform: translateY(-2px);
 }
 
+/* Practice List Link */
+.practiceListLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9d78e6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.practiceListLink:hover {
+  color: #7b5ccf;
+  text-decoration: underline;
+}
+
 /* Info Section */
 .infoSection {
   padding: 5rem 0;

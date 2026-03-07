@@ -113,12 +113,21 @@ const Registration: React.FC = () => {
                   </div>
                   
                   <div className={styles.timelineItem}>
-                    <div className={styles.timelineIcon}>
-                      <i className="fas fa-book"></i>
+                    <div className={`${styles.timelineIcon} ${styles.timelineComplete}`}>
+                      <i className="fas fa-check"></i>
                     </div>
                     <div className={styles.timelineContent}>
                       <h3>Prepare</h3>
-                      <p>Practice word list coming soon</p>
+                      <p>
+                        <a
+                          href="/general/8th CSSC Practice List.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.practiceListLink}
+                        >
+                          <i className="fas fa-download"></i> Download Practice Word List
+                        </a>
+                      </p>
                     </div>
                   </div>
                   
